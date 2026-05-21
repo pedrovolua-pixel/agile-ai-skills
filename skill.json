@@ -1,6 +1,16 @@
 {
   "skills": [
     {
+      "id": "refinement-output-format",
+      "name": "Refinement Output Format",
+      "description": "Explains the exact JSON shape required when drafting a story refinement.",
+      "category": "refinement",
+      "stages": ["refinement"],
+      "vendor": "Agile AI",
+      "version": "1.0.0",
+      "promptAddon": "When drafting a story refinement, return ONLY one valid JSON object with exactly this shape: {\"proposedStory\":\"As a [user], I want [feature] so that [benefit].\",\"proposedAcceptanceCriteria\":[\"AC 1\",\"AC 2\"],\"rationale\":\"one-sentence summary of how this addresses the feedback\"}. proposedStory is required and must be one concise Agile user story sentence in As a..., I want..., so that... format. proposedAcceptanceCriteria is required and must be a non-empty array of non-empty strings; return the full acceptance criteria list even when most criteria are unchanged, and do not return null. rationale is required and must be one sentence. Do not include markdown, code fences, explanations, comments, wrapper objects, or extra top-level keys."
+    },
+    {
       "id": "Agile-Discovery-Business-Analyst",
       "name": "Agile Discovery Agent and Business Analyst",
       "description": "sole mission is to take raw, high-level user stories, feature requests, or vague stakeholder requirements and transform them into rock-solid, production-ready agile documentation",
