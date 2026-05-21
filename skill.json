@@ -1,0 +1,154 @@
+{
+  "skills": [
+    {
+      "id": "sprint-task-authoring",
+      "name": "Sprint Task Authoring",
+      "description": "Creates sprint backlog tasks in the exact JSON shape required before planning poker.",
+      "category": "sprint",
+      "stages": ["sprint"],
+      "vendor": "Agile AI",
+      "version": "1.0.0",
+      "promptAddon": "When creating sprint backlog tasks for One Identity Manager work, return exactly one JSON object with this shape: {\"tasks\":[\"short task title\"],\"discussion\":\"one short sentence\"}. The tasks field MUST be an array of plain strings, not objects. Create 1-3 concrete, role-specific task titles that can be assigned directly to you. Do not include ids, assignees, status, markdown, code fences, or extra top-level keys."
+    },
+    {
+      "id": "technical-design-authoring",
+      "name": "Technical Design Authoring",
+      "description": "Creates design-phase technical design documents in the exact JSON shape required by the app.",
+      "category": "design",
+      "stages": ["design"],
+      "vendor": "Agile AI",
+      "version": "1.0.0",
+      "promptAddon": "When creating a design-phase technical design document for One Identity Manager work, return exactly one JSON object with this shape: {\"impactedSystems\":[\"system\"],\"technicalApproach\":\"approach\",\"devTasks\":[{\"agent\":\"dev_core\",\"task\":\"task\"}],\"testScenarios\":[\"scenario\"],\"effortLevel\":\"M\",\"rollbackPlan\":\"plan\",\"complianceNotes\":\"notes\"}. Required keys are impactedSystems, technicalApproach, devTasks, testScenarios, effortLevel, rollbackPlan, and complianceNotes. devTasks.agent MUST be one of dev_core, dev_integration, or dev_security. effortLevel MUST be one of S, M, L, or XL. You may add optional top-level \"mermaidDiagrams\":[{\"title\":\"flow name\",\"diagram\":\"Mermaid syntax without markdown fences\"}] when another design skill asks for a flow diagram. Do not wrap the object inside designDoc, do not use markdown, and do not add other extra top-level keys."
+    },
+    {
+      "id": "oim-discovery-modeling",
+      "name": "One Identity Manager Discovery Modeling",
+      "description": "Frames OIM requirements around identities, accounts, entitlements, systems, and request journeys.",
+      "category": "discovery",
+      "stages": ["discovery", "refinement"],
+      "vendor": "Agile AI",
+      "version": "1.0.0",
+      "promptAddon": "When shaping One Identity Manager discovery work, identify target systems, account definitions, identities, person records, entitlement types, business roles, application roles, dynamic roles, IT Shop request paths, approval owners, and compliance constraints. Convert vague requests into acceptance criteria that name the OIM objects and lifecycle events involved."
+    },
+    {
+      "id": "oim-story-refinement",
+      "name": "OIM Story Refinement",
+      "description": "Splits and refines OIM stories by object model, synchronization, workflow, policy, and transport scope.",
+      "category": "refinement",
+      "stages": ["refinement"],
+      "vendor": "Agile AI",
+      "version": "1.0.0",
+      "promptAddon": "When refining One Identity Manager stories, separate concerns across schema/object model changes, synchronization project changes, process orchestration, IT Shop workflows, scripts, permissions, reports, and transport. Flag stories that mix configuration, data migration, and production rollout in one unit and propose smaller slices."
+    },
+    {
+      "id": "oim-object-model",
+      "name": "OIM Object Model",
+      "description": "Designs with OIM tables, relations, templates, scripts, and object layer behavior in mind.",
+      "category": "design",
+      "stages": ["design", "dev"],
+      "vendor": "Agile AI",
+      "version": "1.0.0",
+      "promptAddon": "You understand One Identity Manager object model design. When relevant, call out Person, ADSAccount, UNSAccountB, ESet, Org, AERole, AccProduct, PersonWantsOrg, and related assignment tables. Consider templates, formatting scripts, custom columns, object events, permissions, and upgrade-safe configuration. Avoid database-only shortcuts when object layer behavior is required."
+    },
+    {
+      "id": "oim-synchronization",
+      "name": "OIM Synchronization Projects",
+      "description": "Designs and validates synchronization projects, mappings, scopes, and provisioning behavior.",
+      "category": "dev",
+      "stages": ["design", "dev", "qa"],
+      "vendor": "Agile AI",
+      "version": "1.0.0",
+      "promptAddon": "For One Identity Manager synchronization work, specify connected system type, base object, schema classes, mappings, property mapping rules, scopes, filters, revision filtering, provisioning direction, collision behavior, and schedule impact. Include validation for initial sync, delta sync, deletes, disabled accounts, group membership, and rollback or resync strategy."
+    },
+    {
+      "id": "oim-it-shop-workflows",
+      "name": "OIM IT Shop Workflows",
+      "description": "Designs requestable products, shelves, approval workflows, and fulfillment paths.",
+      "category": "design",
+      "stages": ["design", "dev", "qa"],
+      "vendor": "Agile AI",
+      "version": "1.0.0",
+      "promptAddon": "When working on One Identity Manager IT Shop capabilities, model service items, service categories, shelves, requestability, approval policies, approver resolution, escalation, validity periods, fulfillment, cancellation, unsubscribe behavior, and audit evidence. Include request lifecycle test cases for request, approval, denial, escalation, fulfillment, renewal, and withdrawal."
+    },
+    {
+      "id": "oim-process-orchestration",
+      "name": "OIM Process Orchestration",
+      "description": "Designs processes, process steps, job chains, retries, and event-driven automation.",
+      "category": "dev",
+      "stages": ["design", "dev", "qa"],
+      "vendor": "Agile AI",
+      "version": "1.0.0",
+      "promptAddon": "For One Identity Manager process work, reason about events, generating conditions, process tasks, parameters, job service queues, retry behavior, error handling, dependencies, and operational visibility. Prefer idempotent process logic and include how failures are detected, retried, and reconciled."
+    },
+    {
+      "id": "oim-scripting",
+      "name": "OIM Script Library",
+      "description": "Guides VB.NET script, templates, formatting scripts, and custom logic implementation.",
+      "category": "dev",
+      "stages": ["dev", "qa"],
+      "vendor": "Agile AI",
+      "version": "1.0.0",
+      "promptAddon": "When implementing One Identity Manager scripts, keep logic upgrade-safe, deterministic, and object-layer aware. Name expected inputs, output behavior, null handling, logging, error behavior, and test cases. Avoid hidden side effects in templates and formatting scripts, and call out where script libraries, process scripts, or object events are the appropriate extension point."
+    },
+    {
+      "id": "oim-rbac-governance",
+      "name": "OIM RBAC and Governance",
+      "description": "Models business roles, application roles, entitlements, SoD controls, and least privilege.",
+      "category": "design",
+      "stages": ["discovery", "design", "qa", "review"],
+      "vendor": "Agile AI",
+      "version": "1.0.0",
+      "promptAddon": "For One Identity Manager access governance, evaluate business roles, application roles, system entitlements, assignment requests, attestation, policy violations, mitigating controls, and separation-of-duties impact. Prefer least privilege and explain how owners, approvers, and auditors can verify the resulting access model."
+    },
+    {
+      "id": "oim-testing",
+      "name": "OIM Test Design",
+      "description": "Creates test coverage for OIM configuration, synchronization, workflows, scripts, and transports.",
+      "category": "qa",
+      "stages": ["qa"],
+      "vendor": "Agile AI",
+      "version": "1.0.0",
+      "promptAddon": "When testing One Identity Manager work, cover object creation and update, entitlement assignment and removal, IT Shop request lifecycle, synchronization deltas, script edge cases, process failures, permissions, audit logging, and regression impact. Include seed data, expected database/object-layer results, and cleanup or rollback steps."
+    },
+    {
+      "id": "oim-performance",
+      "name": "OIM Performance and Operations",
+      "description": "Reviews OIM changes for performance, job service load, SQL impact, and production operability.",
+      "category": "qa",
+      "stages": ["design", "qa", "transport", "review"],
+      "vendor": "Agile AI",
+      "version": "1.0.0",
+      "promptAddon": "For One Identity Manager performance and operations, check query cost, bulk assignment impact, synchronization runtime, job queue depth, process retries, DBQueue Processor impact, schedule windows, and monitoring. Flag designs that may create runaway processes, excessive templates, broad sync scopes, or unbounded recalculation."
+    },
+    {
+      "id": "oim-transport-release",
+      "name": "OIM Transport and Release",
+      "description": "Plans OIM transports, deployment order, environment promotion, and rollback.",
+      "category": "transport",
+      "stages": ["transport"],
+      "vendor": "Agile AI",
+      "version": "1.0.0",
+      "promptAddon": "For One Identity Manager release work, identify transport packages, configuration dependencies, schema changes, scripts, processes, synchronization project updates, permissions, seed data, and environment-specific values. Specify deployment order, pre-checks, post-checks, rollback plan, and evidence that DEV, TEST, and PROD are aligned."
+    },
+    {
+      "id": "oim-review-evidence",
+      "name": "OIM Review Evidence",
+      "description": "Prepares sprint review and audit evidence for OIM identity governance changes.",
+      "category": "review",
+      "stages": ["review", "retro"],
+      "vendor": "Agile AI",
+      "version": "1.0.0",
+      "promptAddon": "When reviewing One Identity Manager work, summarize business outcome, OIM objects changed, test evidence, approval evidence, synchronization evidence, transport evidence, known limitations, and follow-up risks. For retrospectives, identify where requirements, configuration ownership, environment parity, or test data slowed delivery."
+    },
+    {
+      "id": "mermaid-flow-diagrams",
+      "name": "Mermaid Flow Diagrams",
+      "description": "Adds Mermaid flow or sequence diagrams to technical design documents when OIM workflows have representable flow.",
+      "category": "design",
+      "stages": ["design"],
+      "vendor": "Agile AI",
+      "version": "1.0.0",
+      "promptAddon": "When creating a design-phase technical design document, if the story includes an IT Shop request flow, approval path, synchronization lifecycle, account provisioning path, process chain, rollback path, or system-to-system sequence, include a top-level mermaidDiagrams array. Each entry MUST be {\"title\":\"short diagram title\",\"diagram\":\"valid Mermaid syntax without markdown fences\"}. Keep labels concise and include only flows that clarify the design."
+    }
+  ]
+}
