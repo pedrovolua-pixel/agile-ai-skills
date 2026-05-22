@@ -1,0 +1,2262 @@
+{
+  "packages": [
+    {
+      "id": "oim-implementation-starter",
+      "name": "OIM Implementation Starter",
+      "description": "A vendor-maintained starter backlog for an Oracle Identity Manager style implementation, organized by discovery, design, build, deployment, and delivery phases.",
+      "category": "identity-management",
+      "vendor": "Agile AI Vendor",
+      "version": "1.0.0",
+      "source": "remote",
+      "repositoryUrl": "https://github.com/vendor/agile-ai-story-packages/oim-implementation-starter.json",
+      "epics": [
+        {
+          "id": "oim-discovery",
+          "title": "Discovery and Project Initiation",
+          "objective": "Align stakeholders, conduct OIM discovery, and define project management cadence."
+        },
+        {
+          "id": "oim-design",
+          "title": "Requirements and Use Case Design",
+          "objective": "Document, review, refine, and approve OIM requirements, use cases, and business rules."
+        },
+        {
+          "id": "oim-development",
+          "title": "OIM DEV/TEST Build",
+          "objective": "Configure DEV/TEST identity manager capabilities, connectors, synchronization, and unit tests."
+        },
+        {
+          "id": "oim-deployment",
+          "title": "Deployment Readiness and UAT",
+          "objective": "Validate synchronization, system readiness, UAT support, and deployment phase coordination."
+        },
+        {
+          "id": "oim-delivery",
+          "title": "Production Delivery and Handover",
+          "objective": "Promote transports, configure production sources, verify readiness, support production, and transfer knowledge."
+        }
+      ],
+      "stories": [
+        {
+          "id": "oim-01-discovery-kick-off",
+          "epicId": "oim-discovery",
+          "title": "Discovery: Kick-Off",
+          "story": "As a project team, I want to complete Kick-Off for the Discovery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Kick-Off is completed within the agreed scope: Kick-off meeting preparation and 1 hour meeting.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Discovery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Kick-off meeting preparation and 1 hour meeting.",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "medium",
+          "points": null
+        },
+        {
+          "id": "oim-02-discovery-deliver-oim-workshop",
+          "epicId": "oim-discovery",
+          "title": "Discovery: Deliver OIM workshop",
+          "story": "As a project team, I want to complete Deliver OIM workshop for the Discovery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Deliver OIM workshop is completed within the agreed scope: Up to 4 hours of workshop.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Discovery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Up to 4 hours of workshop.",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery",
+            "oim"
+          ],
+          "priority": "medium",
+          "points": null
+        },
+        {
+          "id": "oim-03-discovery-discovery-meetings",
+          "epicId": "oim-discovery",
+          "title": "Discovery: Discovery meetings",
+          "story": "As a project team, I want to complete Discovery meetings for the Discovery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Discovery meetings is completed within the agreed scope: Conduct up to 8 meetings of 2 hour sessions.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Discovery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Conduct up to 8 meetings of 2 hour sessions.",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "medium",
+          "points": null
+        },
+        {
+          "id": "oim-04-discovery-project-management",
+          "epicId": "oim-discovery",
+          "title": "Discovery: Project Management",
+          "story": "As a project team, I want to complete Project Management for the Discovery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Project Management is completed within the agreed scope: Hours allocated for PM (Discovery Phase).",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Discovery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Hours allocated for PM (Discovery Phase).",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "medium",
+          "points": null
+        },
+        {
+          "id": "oim-05-design-create-requirements-and-uc-document",
+          "epicId": "oim-design",
+          "title": "Design: Create Requirements & UC Document",
+          "story": "As a project team, I want to complete Create Requirements & UC Document for the Design phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Create Requirements & UC Document is completed within the agreed scope: Use cases, requirements and business rules.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Design phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Use cases, requirements and business rules.",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery",
+            "requirements"
+          ],
+          "priority": "medium",
+          "points": null
+        },
+        {
+          "id": "oim-06-design-use-case-review-workshop",
+          "epicId": "oim-design",
+          "title": "Design: Use Case Review Workshop",
+          "story": "As a project team, I want to complete Use Case Review Workshop for the Design phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Use Case Review Workshop is completed within the agreed scope: Review UC & requirements (up to 2 sessions of 2 hour).",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Design phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Review UC & requirements (up to 2 sessions of 2 hour).",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "medium",
+          "points": null
+        },
+        {
+          "id": "oim-07-design-update-the-req-and-uc-document",
+          "epicId": "oim-design",
+          "title": "Design: Update the Req. & UC document",
+          "story": "As a project team, I want to complete Update the Req. & UC document for the Design phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Update the Req. & UC document is completed within the agreed scope: Adjust the document with the customer's feedback.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Design phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Adjust the document with the customer's feedback.",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery",
+            "requirements"
+          ],
+          "priority": "medium",
+          "points": null
+        },
+        {
+          "id": "oim-08-design-adjust-the-req-and-uc-document",
+          "epicId": "oim-design",
+          "title": "Design: Adjust the Req. & UC document",
+          "story": "As a project team, I want to complete Adjust the Req. & UC document for the Design phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Adjust the Req. & UC document is completed within the agreed scope: Adjust the document final acceptance (up to 4 hrs.).",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Design phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Adjust the document final acceptance (up to 4 hrs.).",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery",
+            "requirements"
+          ],
+          "priority": "medium",
+          "points": null
+        },
+        {
+          "id": "oim-09-design-project-management",
+          "epicId": "oim-design",
+          "title": "Design: Project Management",
+          "story": "As a project team, I want to complete Project Management for the Design phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Project Management is completed within the agreed scope: Hours allocated for PM (Design Phase).",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Design phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Hours allocated for PM (Design Phase).",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "medium",
+          "points": null
+        },
+        {
+          "id": "oim-10-develop-oim-environment-configuration-dev-test-environme",
+          "epicId": "oim-development",
+          "title": "Develop: OIM Environment Configuration (DEV/TEST Environment)",
+          "story": "As a project team, I want to complete OIM Environment Configuration (DEV/TEST Environment) for the Develop phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "OIM Environment Configuration (DEV/TEST Environment) is completed within the agreed scope: Configure 1 Environment (IMOD DEV/TEST).",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Develop phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Configure 1 Environment (IMOD DEV/TEST).",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery",
+            "oim"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "oim-11-develop-setup-smtp-mail-server-configuration",
+          "epicId": "oim-development",
+          "title": "Develop: Setup SMTP mail server configuration",
+          "story": "As a project team, I want to complete Setup SMTP mail server configuration for the Develop phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Setup SMTP mail server configuration is completed within the agreed scope: 1 SMTP Mail Server.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Develop phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "1 SMTP Mail Server.",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery",
+            "smtp"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "oim-12-develop-setup-configure-sync-editor-to-sync-data-from-th",
+          "epicId": "oim-development",
+          "title": "Develop: Setup Configure Sync Editor to sync data from the HR system",
+          "story": "As a project team, I want to complete Setup Configure Sync Editor to sync data from the HR system for the Develop phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Setup Configure Sync Editor to sync data from the HR system is completed within the agreed scope: 1 Auth. Source (inbound only).",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Develop phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "1 Auth. Source (inbound only).",
+          "riskLevel": "high",
+          "iamComponents": [
+            "project-delivery",
+            "hr-source",
+            "synchronization"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "oim-13-develop-sync-and-normalize-hr-data",
+          "epicId": "oim-development",
+          "title": "Develop: Sync and Normalize HR data",
+          "story": "As a project team, I want to complete Sync and Normalize HR data for the Develop phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Sync and Normalize HR data is completed within the agreed scope: Sync/Normalize the Auth. Source data.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Develop phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Sync/Normalize the Auth. Source data.",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery",
+            "hr-source",
+            "synchronization"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "oim-14-develop-configure-ad-connector",
+          "epicId": "oim-development",
+          "title": "Develop: Configure AD connector",
+          "story": "As a project team, I want to complete Configure AD connector for the Develop phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Configure AD connector is completed within the agreed scope: One domain for standard J/M/L Use cases.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Develop phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "One domain for standard J/M/L Use cases.",
+          "riskLevel": "high",
+          "iamComponents": [
+            "project-delivery",
+            "directory-services"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "oim-15-develop-configure-o365-sync-back-connector-and-license-m",
+          "epicId": "oim-development",
+          "title": "Develop: Configure O365 Sync back Connector & license mgmt.",
+          "story": "As a project team, I want to complete Configure O365 Sync back Connector & license mgmt. for the Develop phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Configure O365 Sync back Connector & license mgmt. is completed within the agreed scope: One Connector.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Develop phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "One Connector.",
+          "riskLevel": "high",
+          "iamComponents": [
+            "project-delivery",
+            "o365",
+            "synchronization"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "oim-16-develop-configure-o365-j-m-l-uc-for-aad-group-membership",
+          "epicId": "oim-development",
+          "title": "Develop: Configure O365 J/M/L UC for AAD group memberships",
+          "story": "As a project team, I want to complete Configure O365 J/M/L UC for AAD group memberships for the Develop phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Configure O365 J/M/L UC for AAD group memberships is completed within the agreed scope: Up to 10.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Develop phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Up to 10.",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery",
+            "directory-services",
+            "o365",
+            "requirements"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "oim-17-develop-perform-unit-testing",
+          "epicId": "oim-development",
+          "title": "Develop: Perform Unit testing",
+          "story": "As a project team, I want to complete Perform Unit testing for the Develop phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Perform Unit testing is completed within the agreed scope: Execute 1 cycle of unit tests & adjustments.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Develop phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Execute 1 cycle of unit tests & adjustments.",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery",
+            "testing"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "oim-18-develop-project-management",
+          "epicId": "oim-development",
+          "title": "Develop: Project Management",
+          "story": "As a project team, I want to complete Project Management for the Develop phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Project Management is completed within the agreed scope: Hours allocated for PM (Development Phase).",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Develop phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Hours allocated for PM (Development Phase).",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "oim-19-deployment-sync-data-from-hr-system-and-target-system",
+          "epicId": "oim-deployment",
+          "title": "Deployment: Sync data from HR system and target system",
+          "story": "As a project team, I want to complete Sync data from HR system and target system for the Deployment phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Sync data from HR system and target system is completed within the agreed scope: 1 Auth. Source and 2 target systems.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Deployment phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "1 Auth. Source and 2 target systems.",
+          "riskLevel": "high",
+          "iamComponents": [
+            "project-delivery",
+            "hr-source",
+            "synchronization"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "oim-20-deployment-perform-unit-and-system-testing-readiness",
+          "epicId": "oim-deployment",
+          "title": "Deployment: Perform unit and system testing readiness",
+          "story": "As a project team, I want to complete Perform unit and system testing readiness for the Deployment phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Perform unit and system testing readiness is completed within the agreed scope: Readiness validation for unit and system testing.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Deployment phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Readiness validation for unit and system testing.",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery",
+            "testing"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "oim-21-deployment-support-the-uat-and-adjust-if-necessary",
+          "epicId": "oim-deployment",
+          "title": "Deployment: Support the UAT and adjust if necessary",
+          "story": "As a project team, I want to complete Support the UAT and adjust if necessary for the Deployment phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Support the UAT and adjust if necessary is completed within the agreed scope: Support user acceptance testing and required adjustments.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Deployment phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Support user acceptance testing and required adjustments.",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery",
+            "testing"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "oim-22-deployment-project-management",
+          "epicId": "oim-deployment",
+          "title": "Deployment: Project Management",
+          "story": "As a project team, I want to complete Project Management for the Deployment phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Project Management is completed within the agreed scope: Hours allocated for PM (Deployment Phase).",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Deployment phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Hours allocated for PM (Deployment Phase).",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "oim-23-delivery-create-transport-files-from-dev-test-environment",
+          "epicId": "oim-delivery",
+          "title": "Delivery: Create Transport files from DEV/TEST Environment",
+          "story": "As a project team, I want to complete Create Transport files from DEV/TEST Environment for the Delivery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Create Transport files from DEV/TEST Environment is completed within the agreed scope: Transport files prepared from DEV/TEST.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Delivery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Transport files prepared from DEV/TEST.",
+          "riskLevel": "high",
+          "iamComponents": [
+            "project-delivery",
+            "release-management"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "oim-24-delivery-install-transport-files-to-production-environmen",
+          "epicId": "oim-delivery",
+          "title": "Delivery: Install Transport files to Production Environment",
+          "story": "As a project team, I want to complete Install Transport files to Production Environment for the Delivery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Install Transport files to Production Environment is completed within the agreed scope: Transport files installed in Production.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Delivery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Transport files installed in Production.",
+          "riskLevel": "high",
+          "iamComponents": [
+            "project-delivery",
+            "release-management",
+            "requirements"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "oim-25-delivery-configure-smtp-server",
+          "epicId": "oim-delivery",
+          "title": "Delivery: Configure SMTP server",
+          "story": "As a project team, I want to complete Configure SMTP server for the Delivery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Configure SMTP server is completed within the agreed scope: Support the customer in up to 1 server.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Delivery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Support the customer in up to 1 server.",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery",
+            "smtp"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "oim-26-delivery-setup-initial-configuration-parameters-to-point-",
+          "epicId": "oim-delivery",
+          "title": "Delivery: Setup initial configuration parameters to point to Production sources",
+          "story": "As a project team, I want to complete Setup initial configuration parameters to point to Production sources for the Delivery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Setup initial configuration parameters to point to Production sources is completed within the agreed scope: Up to 1 source.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Delivery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Up to 1 source.",
+          "riskLevel": "high",
+          "iamComponents": [
+            "project-delivery",
+            "release-management",
+            "requirements"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "oim-27-delivery-sync-data-from-hr-system-and-target-systems",
+          "epicId": "oim-delivery",
+          "title": "Delivery: Sync data from HR system and target systems",
+          "story": "As a project team, I want to complete Sync data from HR system and target systems for the Delivery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Sync data from HR system and target systems is completed within the agreed scope: One Source and up to 2 targets.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Delivery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "One Source and up to 2 targets.",
+          "riskLevel": "high",
+          "iamComponents": [
+            "project-delivery",
+            "hr-source",
+            "synchronization"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "oim-28-delivery-perform-unit-and-system-testing-readiness",
+          "epicId": "oim-delivery",
+          "title": "Delivery: Perform unit and system testing readiness",
+          "story": "As a project team, I want to complete Perform unit and system testing readiness for the Delivery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Perform unit and system testing readiness is completed within the agreed scope: 1 cycle of checking and adjustments.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Delivery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "1 cycle of checking and adjustments.",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery",
+            "testing"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "oim-29-delivery-resync-data-and-verify-readiness",
+          "epicId": "oim-delivery",
+          "title": "Delivery: Resync data and verify readiness",
+          "story": "As a project team, I want to complete Resync data and verify readiness for the Delivery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Resync data and verify readiness is completed within the agreed scope: Production readiness verified after resync.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Delivery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Production readiness verified after resync.",
+          "riskLevel": "high",
+          "iamComponents": [
+            "project-delivery",
+            "synchronization"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "oim-30-delivery-post-production-support",
+          "epicId": "oim-delivery",
+          "title": "Delivery: Post Production Support",
+          "story": "As a project team, I want to complete Post Production Support for the Delivery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Post Production Support is completed within the agreed scope: Up to 3 business days in a row in business hrs..",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Delivery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Up to 3 business days in a row in business hrs..",
+          "riskLevel": "high",
+          "iamComponents": [
+            "project-delivery",
+            "release-management",
+            "requirements"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "oim-31-delivery-perform-knowledge-transfer-workshop",
+          "epicId": "oim-delivery",
+          "title": "Delivery: Perform Knowledge Transfer Workshop",
+          "story": "As a project team, I want to complete Perform Knowledge Transfer Workshop for the Delivery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Perform Knowledge Transfer Workshop is completed within the agreed scope: Knowledge transfer workshop completed.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Delivery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Knowledge transfer workshop completed.",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "oim-32-delivery-project-management",
+          "epicId": "oim-delivery",
+          "title": "Delivery: Project Management",
+          "story": "As a project team, I want to complete Project Management for the Delivery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Project Management is completed within the agreed scope: Hours allocated for PM (Delivery Phase).",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Delivery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Hours allocated for PM (Delivery Phase).",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "high",
+          "points": null
+        }
+      ]
+    },
+    {
+      "id": "silver",
+      "name": "Silver",
+      "description": "A vendor-maintained Silver starter backlog for IT Shop self-service, requestable items, approvals, dashboards, attestation campaigns, production delivery, and support.",
+      "category": "identity-management",
+      "vendor": "Agile AI Vendor",
+      "version": "1.0.0",
+      "source": "remote",
+      "repositoryUrl": "https://github.com/vendor/agile-ai-story-packages/silver.json",
+      "epics": [
+        {
+          "id": "silver-discovery",
+          "title": "Silver Discovery and Project Initiation",
+          "objective": "Align stakeholders and discover the self-service and attestation package scope."
+        },
+        {
+          "id": "silver-design",
+          "title": "Silver Requirements and Use Case Design",
+          "objective": "Document and approve Silver package use cases, requirements, and business rules."
+        },
+        {
+          "id": "silver-development",
+          "title": "Silver IT Shop and Attestation Build",
+          "objective": "Configure IT Shop, catalogs, approvals, requestable items, reporting, dashboards, and attestation campaigns."
+        },
+        {
+          "id": "silver-deployment",
+          "title": "Silver Deployment Readiness and UAT",
+          "objective": "Validate readiness, support UAT, and complete deployment phase coordination."
+        },
+        {
+          "id": "silver-delivery",
+          "title": "Silver Production Delivery and Support",
+          "objective": "Promote Silver package changes to production, validate readiness, and support production handover."
+        }
+      ],
+      "stories": [
+        {
+          "id": "silver-01-discovery-kick-off",
+          "epicId": "silver-discovery",
+          "title": "Discovery: Kick-Off",
+          "story": "As a project team, I want to complete Kick-Off for the Discovery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Kick-Off is completed within the agreed scope: Kick-off meeting preparation and 1 hours meeting.",
+            "The planned vendor effort is recorded as 2 hours.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Discovery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Kick-off meeting preparation and 1 hours meeting. Estimated vendor weight: 2h.",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "medium",
+          "points": null,
+          "weightHours": 2
+        },
+        {
+          "id": "silver-02-discovery-deliver-oim-workshop-self-service-and-attestatio",
+          "epicId": "silver-discovery",
+          "title": "Discovery: Deliver OIM workshop (Self-service & Attestation)",
+          "story": "As a project team, I want to complete Deliver OIM workshop (Self-service & Attestation) for the Discovery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Deliver OIM workshop (Self-service & Attestation) is completed within the agreed scope: Up to 4 hours of workshop.",
+            "The planned vendor effort is recorded as 4 hours.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Discovery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Up to 4 hours of workshop. Estimated vendor weight: 4h.",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery",
+            "oim",
+            "attestation"
+          ],
+          "priority": "medium",
+          "points": null,
+          "weightHours": 4
+        },
+        {
+          "id": "silver-03-discovery-discovery-meetings",
+          "epicId": "silver-discovery",
+          "title": "Discovery: Discovery meetings",
+          "story": "As a project team, I want to complete Discovery meetings for the Discovery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Discovery meetings is completed within the agreed scope: Conduct up to 8 meetings of 2 hours sessions.",
+            "The planned vendor effort is recorded as 8 hours.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Discovery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Conduct up to 8 meetings of 2 hours sessions. Estimated vendor weight: 8h.",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "medium",
+          "points": null,
+          "weightHours": 8
+        },
+        {
+          "id": "silver-04-discovery-project-management",
+          "epicId": "silver-discovery",
+          "title": "Discovery: Project Management",
+          "story": "As a project team, I want to complete Project Management for the Discovery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Project Management is completed within the agreed scope: Hours allocated for PM (Discovery Phase).",
+            "The planned vendor effort is recorded as 4 hours.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Discovery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Hours allocated for PM (Discovery Phase). Estimated vendor weight: 4h.",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "medium",
+          "points": null,
+          "weightHours": 4
+        },
+        {
+          "id": "silver-05-design-create-requirements-and-uc-document",
+          "epicId": "silver-design",
+          "title": "Design: Create Requirements & UC Document",
+          "story": "As a project team, I want to complete Create Requirements & UC Document for the Design phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Create Requirements & UC Document is completed within the agreed scope: Use cases, requirements and business rules.",
+            "The planned vendor effort is recorded as 16 hours.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Design phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Use cases, requirements and business rules. Estimated vendor weight: 16h.",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery",
+            "requirements"
+          ],
+          "priority": "medium",
+          "points": null,
+          "weightHours": 16
+        },
+        {
+          "id": "silver-06-design-use-case-review-workshop",
+          "epicId": "silver-design",
+          "title": "Design: Use Case Review Workshop",
+          "story": "As a project team, I want to complete Use Case Review Workshop for the Design phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Use Case Review Workshop is completed within the agreed scope: Review UC & requirements (up to 2 sessions of 2 hours).",
+            "The planned vendor effort is recorded as 4 hours.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Design phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Review UC & requirements (up to 2 sessions of 2 hours). Estimated vendor weight: 4h.",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "medium",
+          "points": null,
+          "weightHours": 4
+        },
+        {
+          "id": "silver-07-design-update-the-req-and-uc-document",
+          "epicId": "silver-design",
+          "title": "Design: Update the Req. & UC document",
+          "story": "As a project team, I want to complete Update the Req. & UC document for the Design phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Update the Req. & UC document is completed within the agreed scope: Adjust the document with the customer's feedback.",
+            "The planned vendor effort is recorded as 6 hours.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Design phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Adjust the document with the customer's feedback. Estimated vendor weight: 6h.",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery",
+            "requirements"
+          ],
+          "priority": "medium",
+          "points": null,
+          "weightHours": 6
+        },
+        {
+          "id": "silver-08-design-adjust-the-req-and-uc-document",
+          "epicId": "silver-design",
+          "title": "Design: Adjust the Req. & UC document",
+          "story": "As a project team, I want to complete Adjust the Req. & UC document for the Design phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Adjust the Req. & UC document is completed within the agreed scope: Adjust the document final acceptance (up to 4 hrs.).",
+            "The planned vendor effort is recorded as 2 hours.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Design phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Adjust the document final acceptance (up to 4 hrs.). Estimated vendor weight: 2h.",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery",
+            "requirements"
+          ],
+          "priority": "medium",
+          "points": null,
+          "weightHours": 2
+        },
+        {
+          "id": "silver-09-design-project-management",
+          "epicId": "silver-design",
+          "title": "Design: Project Management",
+          "story": "As a project team, I want to complete Project Management for the Design phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Project Management is completed within the agreed scope: Hours allocated for PM (Design Phase).",
+            "The planned vendor effort is recorded as 7 hours.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Design phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Hours allocated for PM (Design Phase). Estimated vendor weight: 7h.",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "medium",
+          "points": null,
+          "weightHours": 7
+        },
+        {
+          "id": "silver-10-develop-configure-it-shop-module-and-configure-web-serve",
+          "epicId": "silver-development",
+          "title": "Develop: Configure IT Shop module and Configure Web Servers",
+          "story": "As a project team, I want to complete Configure IT Shop module and Configure Web Servers for the Develop phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Configure IT Shop module and Configure Web Servers is completed within the agreed scope: Dev & Test Environments.",
+            "The planned vendor effort is recorded as 3 hours.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Develop phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Dev & Test Environments. Estimated vendor weight: 3h.",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery",
+            "it-shop"
+          ],
+          "priority": "high",
+          "points": null,
+          "weightHours": 3
+        },
+        {
+          "id": "silver-11-develop-apply-customer-branding-to-it-shop",
+          "epicId": "silver-development",
+          "title": "Develop: Apply customer branding to IT Shop",
+          "story": "As a project team, I want to complete Apply customer branding to IT Shop for the Develop phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Apply customer branding to IT Shop is completed within the agreed scope: Customer branding applied to IT Shop.",
+            "The planned vendor effort is recorded as 4 hours.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Develop phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Customer branding applied to IT Shop. Estimated vendor weight: 4h.",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery",
+            "it-shop"
+          ],
+          "priority": "high",
+          "points": null,
+          "weightHours": 4
+        },
+        {
+          "id": "silver-12-develop-setup-it-shop-catalogs-approvals-and-requestable",
+          "epicId": "silver-development",
+          "title": "Develop: Setup IT Shop Catalogs, Approvals and Requestable Items",
+          "story": "As a project team, I want to complete Setup IT Shop Catalogs, Approvals and Requestable Items for the Develop phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Setup IT Shop Catalogs, Approvals and Requestable Items is completed within the agreed scope: Up to 10 items.",
+            "The planned vendor effort is recorded as 16 hours.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Develop phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Up to 10 items. Estimated vendor weight: 16h.",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery",
+            "it-shop",
+            "approvals"
+          ],
+          "priority": "high",
+          "points": null,
+          "weightHours": 16
+        },
+        {
+          "id": "silver-13-develop-setup-standard-reporting-and-dashboards",
+          "epicId": "silver-development",
+          "title": "Develop: Setup standard reporting and dashboards",
+          "story": "As a project team, I want to complete Setup standard reporting and dashboards for the Develop phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Setup standard reporting and dashboards is completed within the agreed scope: No custom reports/Dashboards.",
+            "The planned vendor effort is recorded as 8 hours.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Develop phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "No custom reports/Dashboards. Estimated vendor weight: 8h.",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery",
+            "reporting"
+          ],
+          "priority": "high",
+          "points": null,
+          "weightHours": 8
+        },
+        {
+          "id": "silver-14-develop-setup-attestation-campaigns",
+          "epicId": "silver-development",
+          "title": "Develop: Setup Attestation campaigns",
+          "story": "As a project team, I want to complete Setup Attestation campaigns for the Develop phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Setup Attestation campaigns is completed within the agreed scope: Up to 3 campaigns.",
+            "The planned vendor effort is recorded as 12 hours.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Develop phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Up to 3 campaigns. Estimated vendor weight: 12h.",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery",
+            "attestation"
+          ],
+          "priority": "high",
+          "points": null,
+          "weightHours": 12
+        },
+        {
+          "id": "silver-15-develop-perform-unit-testing",
+          "epicId": "silver-development",
+          "title": "Develop: Perform Unit testing",
+          "story": "As a project team, I want to complete Perform Unit testing for the Develop phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Perform Unit testing is completed within the agreed scope: Execute 1 cycle of unit tests & adjustments.",
+            "The planned vendor effort is recorded as 4 hours.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Develop phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Execute 1 cycle of unit tests & adjustments. Estimated vendor weight: 4h.",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery",
+            "testing"
+          ],
+          "priority": "high",
+          "points": null,
+          "weightHours": 4
+        },
+        {
+          "id": "silver-16-develop-project-management",
+          "epicId": "silver-development",
+          "title": "Develop: Project Management",
+          "story": "As a project team, I want to complete Project Management for the Develop phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Project Management is completed within the agreed scope: Hours allocated for PM (Development Phase).",
+            "The planned vendor effort is recorded as 12 hours.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Develop phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Hours allocated for PM (Development Phase). Estimated vendor weight: 12h.",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "high",
+          "points": null,
+          "weightHours": 12
+        },
+        {
+          "id": "silver-17-deployment-perform-unit-and-system-testing-readiness",
+          "epicId": "silver-deployment",
+          "title": "Deployment: Perform unit and system testing readiness",
+          "story": "As a project team, I want to complete Perform unit and system testing readiness for the Deployment phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Perform unit and system testing readiness is completed within the agreed scope: Readiness validation for unit and system testing.",
+            "The planned vendor effort is recorded as 2 hours.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Deployment phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Readiness validation for unit and system testing. Estimated vendor weight: 2h.",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery",
+            "testing"
+          ],
+          "priority": "high",
+          "points": null,
+          "weightHours": 2
+        },
+        {
+          "id": "silver-18-deployment-support-the-uat-and-adjust-if-necessary",
+          "epicId": "silver-deployment",
+          "title": "Deployment: Support the UAT and adjust if necessary",
+          "story": "As a project team, I want to complete Support the UAT and adjust if necessary for the Deployment phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Support the UAT and adjust if necessary is completed within the agreed scope: Support user acceptance testing and required adjustments.",
+            "The planned vendor effort is recorded as 4 hours.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Deployment phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Support user acceptance testing and required adjustments. Estimated vendor weight: 4h.",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery",
+            "testing"
+          ],
+          "priority": "high",
+          "points": null,
+          "weightHours": 4
+        },
+        {
+          "id": "silver-19-deployment-project-management",
+          "epicId": "silver-deployment",
+          "title": "Deployment: Project Management",
+          "story": "As a project team, I want to complete Project Management for the Deployment phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Project Management is completed within the agreed scope: Hours allocated for PM (Deployment Phase).",
+            "The planned vendor effort is recorded as 2 hours.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Deployment phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Hours allocated for PM (Deployment Phase). Estimated vendor weight: 2h.",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "high",
+          "points": null,
+          "weightHours": 2
+        },
+        {
+          "id": "silver-20-delivery-configure-it-shop-module-and-configure-web-serve",
+          "epicId": "silver-delivery",
+          "title": "Delivery: Configure IT Shop module and Configure Web Servers",
+          "story": "As a project team, I want to complete Configure IT Shop module and Configure Web Servers for the Delivery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Configure IT Shop module and Configure Web Servers is completed within the agreed scope: Support the customer in up to 2 servers (PROD environment).",
+            "The planned vendor effort is recorded as 2 hours.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Delivery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Support the customer in up to 2 servers (PROD environment). Estimated vendor weight: 2h.",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery",
+            "it-shop"
+          ],
+          "priority": "high",
+          "points": null,
+          "weightHours": 2
+        },
+        {
+          "id": "silver-21-delivery-create-transport-files-from-dev-test-environment",
+          "epicId": "silver-delivery",
+          "title": "Delivery: Create Transport files from DEV/TEST Environment",
+          "story": "As a project team, I want to complete Create Transport files from DEV/TEST Environment for the Delivery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Create Transport files from DEV/TEST Environment is completed within the agreed scope: Transport files prepared from DEV/TEST.",
+            "The planned vendor effort is recorded as 2 hours.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Delivery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Transport files prepared from DEV/TEST. Estimated vendor weight: 2h.",
+          "riskLevel": "high",
+          "iamComponents": [
+            "project-delivery",
+            "release-management"
+          ],
+          "priority": "high",
+          "points": null,
+          "weightHours": 2
+        },
+        {
+          "id": "silver-22-delivery-install-transport-files-to-production-environmen",
+          "epicId": "silver-delivery",
+          "title": "Delivery: Install Transport files to Production Environment",
+          "story": "As a project team, I want to complete Install Transport files to Production Environment for the Delivery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Install Transport files to Production Environment is completed within the agreed scope: Support the customer in up to 1 server.",
+            "The planned vendor effort is recorded as 2 hours.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Delivery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Support the customer in up to 1 server. Estimated vendor weight: 2h.",
+          "riskLevel": "high",
+          "iamComponents": [
+            "project-delivery",
+            "release-management",
+            "requirements"
+          ],
+          "priority": "high",
+          "points": null,
+          "weightHours": 2
+        },
+        {
+          "id": "silver-23-delivery-perform-unit-and-system-testing-readiness",
+          "epicId": "silver-delivery",
+          "title": "Delivery: Perform unit and system testing readiness",
+          "story": "As a project team, I want to complete Perform unit and system testing readiness for the Delivery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Perform unit and system testing readiness is completed within the agreed scope: 1 cycle of checking and adjustments.",
+            "The planned vendor effort is recorded as 2 hours.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Delivery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "1 cycle of checking and adjustments. Estimated vendor weight: 2h.",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery",
+            "testing"
+          ],
+          "priority": "high",
+          "points": null,
+          "weightHours": 2
+        },
+        {
+          "id": "silver-24-delivery-post-production-support",
+          "epicId": "silver-delivery",
+          "title": "Delivery: Post Production Support",
+          "story": "As a project team, I want to complete Post Production Support for the Delivery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Post Production Support is completed within the agreed scope: Up to 3 business days in a row in business hrs..",
+            "The planned vendor effort is recorded as 16 hours.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Delivery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Up to 3 business days in a row in business hrs.. Estimated vendor weight: 16h.",
+          "riskLevel": "high",
+          "iamComponents": [
+            "project-delivery",
+            "release-management",
+            "requirements"
+          ],
+          "priority": "high",
+          "points": null,
+          "weightHours": 16
+        },
+        {
+          "id": "silver-25-delivery-project-management",
+          "epicId": "silver-delivery",
+          "title": "Delivery: Project Management",
+          "story": "As a project team, I want to complete Project Management for the Delivery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Project Management is completed within the agreed scope: Hours allocated for PM (Delivery Phase).",
+            "The planned vendor effort is recorded as 6 hours.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Delivery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Hours allocated for PM (Delivery Phase). Estimated vendor weight: 6h.",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "high",
+          "points": null,
+          "weightHours": 6
+        }
+      ]
+    },
+    {
+      "id": "gold",
+      "name": "Gold",
+      "description": "A vendor-maintained Gold starter backlog for IT Shop catalogs, approvals, requestable items, SoD rules, risk rules, additional target connectors, production sync, and knowledge transfer.",
+      "category": "identity-management",
+      "vendor": "Agile AI Vendor",
+      "version": "1.0.0",
+      "source": "remote",
+      "repositoryUrl": "https://github.com/vendor/agile-ai-story-packages/gold.json",
+      "epics": [
+        {
+          "id": "gold-discovery",
+          "title": "Gold Discovery and Project Initiation",
+          "objective": "Align stakeholders and discover applications, IT Shop items, risk rules, and target systems for the Gold package."
+        },
+        {
+          "id": "gold-design",
+          "title": "Gold Requirements and Use Case Design",
+          "objective": "Document and approve Gold package requirements, use cases, business rules, and acceptance expectations."
+        },
+        {
+          "id": "gold-development",
+          "title": "Gold IT Shop, SoD, Risk, and Connector Build",
+          "objective": "Configure IT Shop catalogs, approvals, requestable items, SoD rules, risk rules, and additional target connectors."
+        },
+        {
+          "id": "gold-deployment",
+          "title": "Gold Deployment Readiness and UAT",
+          "objective": "Validate testing readiness, perform initial sync and data imports, support UAT, and complete deployment coordination."
+        },
+        {
+          "id": "gold-delivery",
+          "title": "Gold Production Delivery and Knowledge Transfer",
+          "objective": "Promote transports, verify production readiness, sync target systems, provide support, and complete knowledge transfer."
+        }
+      ],
+      "stories": [
+        {
+          "id": "gold-01-discovery-kick-off",
+          "epicId": "gold-discovery",
+          "title": "Discovery: Kick-Off",
+          "story": "As a project team, I want to complete Kick-Off for the Discovery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Kick-Off is completed within the agreed scope: Kick-off meeting preparation and 1 hours meeting.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Discovery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Kick-off meeting preparation and 1 hours meeting.",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "medium",
+          "points": null
+        },
+        {
+          "id": "gold-02-discovery-deliver-oim-workshop",
+          "epicId": "gold-discovery",
+          "title": "Discovery: Deliver OIM workshop",
+          "story": "As a project team, I want to complete Deliver OIM workshop for the Discovery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Deliver OIM workshop is completed within the agreed scope: Up to 4 hours of workshop (Applications, IT Shop items, risk rules).",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Discovery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Up to 4 hours of workshop (Applications, IT Shop items, risk rules).",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery",
+            "oim"
+          ],
+          "priority": "medium",
+          "points": null
+        },
+        {
+          "id": "gold-03-discovery-discovery-meetings",
+          "epicId": "gold-discovery",
+          "title": "Discovery: Discovery meetings",
+          "story": "As a project team, I want to complete Discovery meetings for the Discovery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Discovery meetings is completed within the agreed scope: Conduct up to 8 meetings of 2 hours sessions.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Discovery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Conduct up to 8 meetings of 2 hours sessions.",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "medium",
+          "points": null
+        },
+        {
+          "id": "gold-04-discovery-project-management",
+          "epicId": "gold-discovery",
+          "title": "Discovery: Project Management",
+          "story": "As a project team, I want to complete Project Management for the Discovery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Project Management is completed within the agreed scope: Hours allocated for PM (Discovery Phase).",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Discovery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Hours allocated for PM (Discovery Phase).",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "medium",
+          "points": null
+        },
+        {
+          "id": "gold-05-design-create-requirements-and-uc-document",
+          "epicId": "gold-design",
+          "title": "Design: Create Requirements & UC Document",
+          "story": "As a project team, I want to complete Create Requirements & UC Document for the Design phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Create Requirements & UC Document is completed within the agreed scope: Use cases, requirements and business rules.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Design phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Use cases, requirements and business rules.",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery",
+            "requirements"
+          ],
+          "priority": "medium",
+          "points": null
+        },
+        {
+          "id": "gold-06-design-use-case-review-workshop",
+          "epicId": "gold-design",
+          "title": "Design: Use Case Review Workshop",
+          "story": "As a project team, I want to complete Use Case Review Workshop for the Design phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Use Case Review Workshop is completed within the agreed scope: Review UC & requirements (up to 2 sessions of 2 hrs.).",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Design phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Review UC & requirements (up to 2 sessions of 2 hrs.).",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "medium",
+          "points": null
+        },
+        {
+          "id": "gold-07-design-update-the-req-and-uc-document",
+          "epicId": "gold-design",
+          "title": "Design: Update the Req. & UC document",
+          "story": "As a project team, I want to complete Update the Req. & UC document for the Design phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Update the Req. & UC document is completed within the agreed scope: Adjust the document with the customer's feedback.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Design phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Adjust the document with the customer's feedback.",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery",
+            "requirements"
+          ],
+          "priority": "medium",
+          "points": null
+        },
+        {
+          "id": "gold-08-design-adjust-the-req-and-uc-document",
+          "epicId": "gold-design",
+          "title": "Design: Adjust the Req. & UC document",
+          "story": "As a project team, I want to complete Adjust the Req. & UC document for the Design phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Adjust the Req. & UC document is completed within the agreed scope: Adjust the document final acceptance (up to 4 hrs.).",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Design phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Adjust the document final acceptance (up to 4 hrs.).",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery",
+            "requirements"
+          ],
+          "priority": "medium",
+          "points": null
+        },
+        {
+          "id": "gold-09-design-project-management",
+          "epicId": "gold-design",
+          "title": "Design: Project Management",
+          "story": "As a project team, I want to complete Project Management for the Design phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Project Management is completed within the agreed scope: Hours allocated for PM (Design Phase).",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Design phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Hours allocated for PM (Design Phase).",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "medium",
+          "points": null
+        },
+        {
+          "id": "gold-10-develop-setup-it-shop-catalogs-approvals-and-requestable",
+          "epicId": "gold-development",
+          "title": "Develop: Setup IT Shop Catalogs, Approvals and Requestable Items",
+          "story": "As a project team, I want to complete Setup IT Shop Catalogs, Approvals and Requestable Items for the Develop phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Setup IT Shop Catalogs, Approvals and Requestable Items is completed within the agreed scope: Up to 10 items.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Develop phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Up to 10 items.",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery",
+            "it-shop",
+            "approvals"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "gold-11-develop-setup-sod-rules",
+          "epicId": "gold-development",
+          "title": "Develop: Setup SoD Rules",
+          "story": "As a project team, I want to complete Setup SoD Rules for the Develop phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Setup SoD Rules is completed within the agreed scope: Up to 3 SoD Rules.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Develop phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Up to 3 SoD Rules.",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery",
+            "sod"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "gold-12-develop-setup-risk-base-rules",
+          "epicId": "gold-development",
+          "title": "Develop: Setup Risk Base rules",
+          "story": "As a project team, I want to complete Setup Risk Base rules for the Develop phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Setup Risk Base rules is completed within the agreed scope: Up to 10 Risk Base Rules.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Develop phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Up to 10 Risk Base Rules.",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery",
+            "risk-rules"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "gold-13-develop-setup-oi-standard-connectors-to-additional-syste",
+          "epicId": "gold-development",
+          "title": "Develop: Setup OI standard connectors to additional systems (3 max)",
+          "story": "As a project team, I want to complete Setup OI standard connectors to additional systems (3 max) for the Develop phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Setup OI standard connectors to additional systems (3 max) is completed within the agreed scope: Up to 3 target systems (Joiners/Movers/Leavers).",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Develop phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Up to 3 target systems (Joiners/Movers/Leavers).",
+          "riskLevel": "high",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "gold-14-develop-perform-unit-testing",
+          "epicId": "gold-development",
+          "title": "Develop: Perform Unit testing",
+          "story": "As a project team, I want to complete Perform Unit testing for the Develop phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Perform Unit testing is completed within the agreed scope: Execute 1 cycle of unit tests & adjustments.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Develop phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Execute 1 cycle of unit tests & adjustments.",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery",
+            "testing"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "gold-15-develop-project-management",
+          "epicId": "gold-development",
+          "title": "Develop: Project Management",
+          "story": "As a project team, I want to complete Project Management for the Develop phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Project Management is completed within the agreed scope: Hours allocated for PM (Development Phase).",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Develop phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Hours allocated for PM (Development Phase).",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "gold-16-deployment-perform-unit-and-system-testing-readiness",
+          "epicId": "gold-deployment",
+          "title": "Deployment: Perform unit and system testing readiness",
+          "story": "As a project team, I want to complete Perform unit and system testing readiness for the Deployment phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Perform unit and system testing readiness is completed within the agreed scope: Readiness validation for unit and system testing.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Deployment phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Readiness validation for unit and system testing.",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery",
+            "testing"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "gold-17-deployment-perform-initial-sync-and-data-imports-and-verify",
+          "epicId": "gold-deployment",
+          "title": "Deployment: Perform initial sync and data imports and verify readiness",
+          "story": "As a project team, I want to complete Perform initial sync and data imports and verify readiness for the Deployment phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Perform initial sync and data imports and verify readiness is completed within the agreed scope: Initial sync and data import readiness verified.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Deployment phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Initial sync and data import readiness verified.",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery",
+            "synchronization",
+            "data-imports"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "gold-18-deployment-support-the-uat-and-adjust-if-necessary",
+          "epicId": "gold-deployment",
+          "title": "Deployment: Support the UAT and adjust if necessary",
+          "story": "As a project team, I want to complete Support the UAT and adjust if necessary for the Deployment phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Support the UAT and adjust if necessary is completed within the agreed scope: Support user acceptance testing and required adjustments.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Deployment phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Support user acceptance testing and required adjustments.",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery",
+            "testing"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "gold-19-deployment-project-management",
+          "epicId": "gold-deployment",
+          "title": "Deployment: Project Management",
+          "story": "As a project team, I want to complete Project Management for the Deployment phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Project Management is completed within the agreed scope: Hours allocated for PM (Deployment Phase).",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Deployment phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Hours allocated for PM (Deployment Phase).",
+          "riskLevel": "medium",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "gold-20-delivery-create-transport-files-from-dev-test-environment",
+          "epicId": "gold-delivery",
+          "title": "Delivery: Create Transport files from DEV/TEST Environment",
+          "story": "As a project team, I want to complete Create Transport files from DEV/TEST Environment for the Delivery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Create Transport files from DEV/TEST Environment is completed within the agreed scope: Transport files prepared from DEV/TEST.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Delivery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Transport files prepared from DEV/TEST.",
+          "riskLevel": "high",
+          "iamComponents": [
+            "project-delivery",
+            "release-management"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "gold-21-delivery-check-the-prod-environment-readiness-and-adjust",
+          "epicId": "gold-delivery",
+          "title": "Delivery: Check the PROD environment readiness and adjust",
+          "story": "As a project team, I want to complete Check the PROD environment readiness and adjust for the Delivery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Check the PROD environment readiness and adjust is completed within the agreed scope: Production environment readiness checked and adjusted.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Delivery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Production environment readiness checked and adjusted.",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "gold-22-delivery-install-transport-files-to-production-environmen",
+          "epicId": "gold-delivery",
+          "title": "Delivery: Install Transport files to Production Environment",
+          "story": "As a project team, I want to complete Install Transport files to Production Environment for the Delivery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Install Transport files to Production Environment is completed within the agreed scope: Transport files installed in Production.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Delivery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Transport files installed in Production.",
+          "riskLevel": "high",
+          "iamComponents": [
+            "project-delivery",
+            "release-management",
+            "requirements"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "gold-23-delivery-perform-unit-and-system-testing-readiness",
+          "epicId": "gold-delivery",
+          "title": "Delivery: Perform unit and system testing readiness",
+          "story": "As a project team, I want to complete Perform unit and system testing readiness for the Delivery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Perform unit and system testing readiness is completed within the agreed scope: 1 cycle of checking and adjustments.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Delivery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "1 cycle of checking and adjustments.",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery",
+            "testing"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "gold-24-delivery-perform-initial-sync-and-data-imports",
+          "epicId": "gold-delivery",
+          "title": "Delivery: Perform initial sync and data imports",
+          "story": "As a project team, I want to complete Perform initial sync and data imports for the Delivery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Perform initial sync and data imports is completed within the agreed scope: Up to 3 target systems sync.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Delivery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Up to 3 target systems sync.",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery",
+            "synchronization",
+            "data-imports"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "gold-25-delivery-post-production-support",
+          "epicId": "gold-delivery",
+          "title": "Delivery: Post Production Support",
+          "story": "As a project team, I want to complete Post Production Support for the Delivery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Post Production Support is completed within the agreed scope: Up to 3 business days in a row in business hrs..",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Delivery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Up to 3 business days in a row in business hrs..",
+          "riskLevel": "high",
+          "iamComponents": [
+            "project-delivery",
+            "release-management",
+            "requirements"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "gold-26-delivery-perform-knowledge-transfer-workshop",
+          "epicId": "gold-delivery",
+          "title": "Delivery: Perform Knowledge Transfer Workshop",
+          "story": "As a project team, I want to complete Perform Knowledge Transfer Workshop for the Delivery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Perform Knowledge Transfer Workshop is completed within the agreed scope: Up to 2 sessions of 4 hours during 2 business days in a row.",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Delivery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Up to 2 sessions of 4 hours during 2 business days in a row.",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "high",
+          "points": null
+        },
+        {
+          "id": "gold-27-delivery-project-management",
+          "epicId": "gold-delivery",
+          "title": "Delivery: Project Management",
+          "story": "As a project team, I want to complete Project Management for the Delivery phase so that the implementation can progress with the agreed scope and acceptance evidence.",
+          "acceptanceCriteria": [
+            "Project Management is completed within the agreed scope: Hours allocated for PM (Delivery Phase).",
+            "Assumptions, decisions, dependencies, and risks are captured in the project record.",
+            "Any customer feedback or action items are documented with an owner and target date.",
+            "The product owner or customer representative accepts the Delivery phase deliverable."
+          ],
+          "dod": [
+            "Deliverable evidence is attached or linked.",
+            "Open actions are assigned and visible to the project team.",
+            "The story is ready for the next phase handoff."
+          ],
+          "businessValue": "Hours allocated for PM (Delivery Phase).",
+          "riskLevel": "low",
+          "iamComponents": [
+            "project-delivery"
+          ],
+          "priority": "high",
+          "points": null
+        }
+      ]
+    }
+  ]
+}
