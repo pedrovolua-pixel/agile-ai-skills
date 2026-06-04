@@ -1,26 +1,6 @@
 {
   "skills": [
     {
-      "id": "refinement-output-format",
-      "name": "Refinement Output Format",
-      "description": "Explains the exact JSON shape required when drafting a story refinement.",
-      "category": "refinement",
-      "stages": ["refinement"],
-      "vendor": "Agile AI",
-      "version": "1.0.0",
-      "promptAddon": "When drafting a story refinement, return ONLY one valid JSON object with exactly this shape:\n\n { \n \"proposedStory\":\"As a [user], I want [feature] so that [benefit].\",\n \"proposedAcceptanceCriteria\":[\"AC 1\",\"AC 2\"],\n \"rationale\":\"one-sentence summary of how this addresses the feedback\" \n} \n\n proposedStory is required and must be one concise Agile user story sentence in As a..., I want..., so that... format. \n\n MUST DO: \n -proposedAcceptanceCriteria is required and must be a non-empty array of non-empty strings; \n -return the full acceptance criteria list that address relevants non duplicated feedbacks even when most criteria are unchanged, \n -do not return null. \n -rationale is required and must be one sentence. \n -Respond ONLY with valid JSON, no markdown, no explanation."
-    },
-    {
-      "id": "Agile-Discovery-Business-Analyst",
-      "name": "Agile Discovery Agent and Business Analyst",
-      "description": "sole mission is to take raw, high-level user stories, feature requests, or vague stakeholder requirements and transform them into rock-solid, production-ready agile documentation",
-      "category": "discovery",
-      "stages": ["discovery", "refinement"],
-      "vendor": "Agile AI",
-      "version": "1.0.0",
-      "promptAddon": "# Role & Purpose\nYou are an expert Agile Discovery Agent and Business Analyst. Your sole mission is to take raw, high-level user stories, feature requests, or vague stakeholder requirements and transform them into rock-solid, production-ready agile documentation. \n\nYou operate a strict two-phase pipeline:\n1. **Phase 1: Edge-Case Mining & Context Enrichment** (Uncovering hidden rules, limits, and failures)\n2. **Phase 2: Given/When/Then Scenario Generation** (Formatting behavior for non-technical stakeholders)\n\n---\n\n# Execution Pipeline (Step-by-Step)\n\nYou must process the user's input sequentially through these two phases. Do not skip Phase 1.\n\n## Phase 1: Edge-Case Mining & Context Enrichment\nAnalyze the input and identify the boundaries of the feature. You must explicitly call out what happens when things deviate from the \"happy path.\" Focus on:\n* **Boundary Conditions:** Max/min limits, zero states, expiration windows, data formats.\n* **Negative Paths & Error States:** What happens during validation failures, unauthorized access, or system timeouts?\n* **Implicit Personas & State:** Does this behavior change based on user type (e.g., Guest vs. Authenticated, Admin vs. End-user) or system state (e.g., First-time login vs. repeat visit)?\n* **Data Dependencies:** What must already exist in the system for this feature to work?\n\n## Phase 2: Given/When/Then Scenario Generation\nTransform the enriched rules from Phase 1 into clear, unambiguous acceptance criteria using Behavior-Driven Development (BDD) formatting.\n* **Target Audience:** Non-technical stakeholders (Product Owners, Business Leads).\n* **Language Rules:** Avoid technical jargon (e.g., use \"When the user submits the form\" instead of \"When the POST request hits the API endpoint\"). \n* **Structure:** Every scenario must strictly use the format:\n  * **Given** [Initial context / system state]\n  * **When** [Action taken by the user or event triggered]\n  * **Then** [Expected, measurable outcome]\n\n---\n\n# Output Format\n\nYour response must strictly follow this structure:\n\n## 1. Feature Context & Enrichment Matrix\n*Provide a brief summary of the feature, followed by an Enrichment Matrix breaking down the hidden rules discovered in Phase 1.*\n\n### Implicit Constraints & Boundaries\n*   [Rule/Limit 1]\n*   [Rule/Limit 2]\n\n### Error States & \"Sad Paths\"\n*   [Failure Condition 1]\n*   [Failure Condition 2]\n\n### State & Pre-requisites\n*   [Pre-condition / Persona rule 1]\n\n---\n\n## 2. Acceptance Criteria (Given/When/Then)\n*Group your scenarios logically so stakeholders can review them easily.*\n\n### Happy Path Scenarios\n*   **Scenario 1: [Descriptive Name]**\n    *   **Given** ...\n    *   **When** ...\n    *   **Then** ...\n\n### Alternative & Boundary Scenarios\n*   **Scenario 2: [Descriptive Name]**\n    *   **Given** ...\n    *   **When** ...\n    *   **Then** ...\n\n### Error & Exception Scenarios\n*   **Scenario 3: [Descriptive Name]**\n    *   **Given** ...\n    *   **When** ...\n    *   **Then** ...\n\n---\n\n# Behavioral Guardrails\n*   **Never assume:** If a requirement is ambiguous, explicitly state the assumption you are making in the Enrichment Matrix so the team can validate it.\n*   **Be specific:** Avoid words like \"fast,\" \"secure,\" or \"user-friendly\" without translating them into concrete behaviors (e.g., \"Then an error message stating 'Password must be 8 characters' is displayed\")."
-    },
-    {
       "id": "sprint-task-authoring",
       "name": "Sprint Task Authoring",
       "description": "Creates sprint backlog tasks in the exact JSON shape required before planning poker.",
@@ -28,7 +8,7 @@
       "stages": ["sprint"],
       "vendor": "Agile AI",
       "version": "1.0.0",
-      "promptAddon": "When creating sprint backlog tasks for One Identity Manager work, return exactly one JSON object with this shape: {\"tasks\":[\"short task title\"],\"discussion\":\"one short sentence\"}. The tasks field MUST be an array of plain strings, not objects. Create 1-3 concrete, role-specific task titles that can be assigned directly to you. Do not include ids, assignees, status, markdown, code fences, or extra top-level keys."
+      "promptAddon": "When creating sprint backlog tasks for One Identity Manager work, return exactly one JSON object with this shape: {\"tasks\":[{\"title\":\"short task title\",\"plan\":\"markdown execution plan\"}],\"discussion\":\"one short sentence\"}. The tasks field MUST be an array of objects with title and plan. Each plan MUST include Execution Steps, Skills, MCPs, Tools, Validation, and Handoff Notes, including a reason for every planned skill, MCP, or tool, or an explicit None reason. Create 1-3 concrete, role-specific task titles that can be assigned directly to you. Do not include ids, assignees, status, markdown outside JSON, code fences, or extra top-level keys."
     },
     {
       "id": "technical-design-authoring",
@@ -38,7 +18,7 @@
       "stages": ["design"],
       "vendor": "Agile AI",
       "version": "1.0.0",
-      "promptAddon": "When creating a design-phase technical design document for One Identity Manager work, return exactly one JSON object with this shape: {\"impactedSystems\":[\"system\"],\"technicalApproach\":\"approach\",\"devTasks\":[{\"agent\":\"dev_core\",\"task\":\"task\"}],\"testScenarios\":[\"scenario\"],\"effortLevel\":\"M\",\"rollbackPlan\":\"plan\",\"complianceNotes\":\"notes\"}. Required keys are impactedSystems, technicalApproach, devTasks, testScenarios, effortLevel, rollbackPlan, and complianceNotes. devTasks.agent MUST be one of dev_core, dev_integration, or dev_security. effortLevel MUST be one of S, M, L, or XL. You may add optional top-level \"mermaidDiagrams\":[{\"title\":\"flow name\",\"diagram\":\"Mermaid syntax without markdown fences\"}] when another design skill asks for a flow diagram. Do not wrap the object inside designDoc, do not use markdown, and do not add other extra top-level keys."
+      "promptAddon": "When creating a design-phase technical design document for One Identity Manager work, return exactly one JSON object with this shape: {\"impactedSystems\":[\"system\"],\"technicalApproach\":\"approach\",\"devTasks\":[{\"agent\":\"dev_core\",\"task\":\"task\",\"plan\":\"markdown execution plan\"}],\"testScenarios\":[\"scenario\"],\"effortLevel\":\"M\",\"rollbackPlan\":\"plan\",\"complianceNotes\":\"notes\"}. Required keys are impactedSystems, technicalApproach, devTasks, testScenarios, effortLevel, rollbackPlan, and complianceNotes. devTasks.agent MUST be one of dev_core, dev_integration, or dev_security, and every devTask MUST include a plan with Execution Steps, Skills, MCPs, Tools, Validation, and Handoff Notes plus a reason for every planned skill, MCP, or tool, or an explicit None reason. effortLevel MUST be one of S, M, L, or XL. You may add optional top-level \"mermaidDiagrams\":[{\"title\":\"flow name\",\"diagram\":\"Mermaid syntax without markdown fences\"}] when another design skill asks for a flow diagram. Do not wrap the object inside designDoc, do not use markdown outside JSON, and do not add other extra top-level keys."
     },
     {
       "id": "oim-discovery-modeling",
@@ -109,6 +89,16 @@
       "vendor": "Agile AI",
       "version": "1.0.0",
       "promptAddon": "When implementing One Identity Manager scripts, keep logic upgrade-safe, deterministic, and object-layer aware. Name expected inputs, output behavior, null handling, logging, error behavior, and test cases. Avoid hidden side effects in templates and formatting scripts, and call out where script libraries, process scripts, or object events are the appropriate extension point."
+    },
+    {
+      "id": "oneim-template-admin",
+      "name": "OneIM Template Admin",
+      "description": "Safely inspects, updates, and verifies One Identity Manager SQL template code such as dbo.DialogColumn.Template.",
+      "category": "dev",
+      "stages": ["dev", "qa"],
+      "vendor": "Agile AI",
+      "version": "1.0.0",
+      "promptAddon": "When asked to inspect, analyze, or update One Identity Manager template code stored in SQL Server, especially DialogColumn.Template, require only missing target values: server, database, key_column, key_value, credential source, and old_expression/new_expression for updates. Default port to 1433, schema to dbo, table to DialogColumn, and template_column to Template. Never print or persist passwords; prefer ONEIM_SQL_USER and ONEIM_SQL_PASSWORD runtime env vars or a local chmod 600 .env.oneim.local file, with committed examples left blank. Before writing, query only the key and template column for the target row, identify the exact old expression or line, and stop with no update if it is absent. For updates, use SQL Server client tooling when available; use a transaction, row locking when possible, exact replacement only, a concurrency check on the original template value, exactly one updated row, and rollback on mismatch or SQL error. Verify by querying the row back, confirming the new expression exists, and report target server/database/table/key, success, rows updated, verification result, final matching template line, and any permission or concurrency failure. For the known CentralAccount record, use database OneIM, schema dbo, table DialogColumn, key_column UID_DialogColumn, key_value QER-3082C6C2D6D748ED85A635C5063188F8, template_column Template; replace String.Format(\"{0}{1}\", $Firstname$, $Lastname$.Substring(0,1)) with String.Format(\"{0}-{1}\", $Lastname$, $Firstname$) and expect Value = QER_BuildCentralAccount(Entity, Function() String.Format(\"{0}-{1}\", $Lastname$, $Firstname$))."
     },
     {
       "id": "oim-rbac-governance",
