@@ -58,7 +58,7 @@
       "stages": ["design", "dev", "qa"],
       "vendor": "Agile AI",
       "version": "1.0.0",
-      "promptAddon": "For One Identity Manager synchronization work, specify connected system type, base object, schema classes, mappings, property mapping rules, scopes, filters, revision filtering, provisioning direction, collision behavior, and schedule impact. Include validation for initial sync, delta sync, deletes, disabled accounts, group membership, and rollback or resync strategy."
+      "promptAddon": "For One Identity Manager synchronization work, specify connected system type, base object, schema classes, mappings, property mapping rules, scopes, filters, revision filtering, provisioning direction, collision behavior, and schedule impact. Cover the three target systems in scope: Active Directory (ADS connector; base objects ADSAccount, ADSGroup, ADSContainer; map account, group membership, container and UPN), Azure AD / Entra ID (Azure AD / Microsoft Graph connector; base objects for AAD user, group, and subscription/license assignment), and HR source systems (database, file, or SCIM connector feeding Person and identity attributes via a one-directional read into the OIM master data). For each, note the connector and base objects and the typical high-level mappings. HARD RULE: any secret, password, API key, or client secret needed for a synchronization connection is entered by a HUMAN in the Synchronization Editor for validation and test runs, never passed through agents or MCP input; the design must create a human task (executor \"human\", agent null) instructing an operator to enter that secret in the Synchronization Editor. Include validation for initial sync, delta sync, deletes, disabled accounts, group membership, and rollback or resync strategy."
     },
     {
       "id": "oim-it-shop-workflows",
@@ -98,7 +98,7 @@
       "stages": ["dev", "qa"],
       "vendor": "Agile AI",
       "version": "1.0.0",
-      "promptAddon": "When asked to inspect, analyze, or update One Identity Manager template code stored in SQL Server, especially DialogColumn.Template, require only missing target values: server, database, key_column, key_value, credential source, and old_expression/new_expression for updates. Default port to 1433, schema to dbo, table to DialogColumn, and template_column to Template. Never print or persist passwords; prefer ONEIM_SQL_USER and ONEIM_SQL_PASSWORD runtime env vars or a local chmod 600 .env.oneim.local file, with committed examples left blank. Before writing, query only the key and template column for the target row, identify the exact old expression or line, and stop with no update if it is absent. For updates, use SQL Server client tooling when available; use a transaction, row locking when possible, exact replacement only, a concurrency check on the original template value, exactly one updated row, and rollback on mismatch or SQL error. Verify by querying the row back, confirming the new expression exists, and report target server/database/table/key, success, rows updated, verification result, final matching template line, and any permission or concurrency failure. For the known CentralAccount record, use database OneIM, schema dbo, table DialogColumn, key_column UID_DialogColumn, key_value QER-3082C6C2D6D748ED85A635C5063188F8, template_column Template; replace String.Format(\"{0}{1}\", $Firstname$, $Lastname$.Substring(0,1)) with String.Format(\"{0}-{1}\", $Lastname$, $Firstname$) and expect Value = QER_BuildCentralAccount(Entity, Function() String.Format(\"{0}-{1}\", $Lastname$, $Firstname$))."
+      "promptAddon": "When asked to inspect, analyze, or update One Identity Manager template code stored in SQL Server, this applies to ANY column data-pattern transformation held in DialogColumn.Template and its associated DialogScript, not only CentralAccount. Require only missing target values: server, database, key_column, key_value, credential source, and old_expression/new_expression for updates. Default port to 1433, schema to dbo, table to DialogColumn, and template_column to Template. Number-append uniqueness is native to the platform and needs no template change; any other uniqueness logic lives in the DialogScript and must be reviewed and edited there. Never print or persist passwords; prefer ONEIM_SQL_USER and ONEIM_SQL_PASSWORD runtime env vars or a local chmod 600 .env.oneim.local file, with committed examples left blank. Before writing, query only the key and template column for the target row, identify the exact old expression or line, and stop with no update if it is absent. For updates, use SQL Server client tooling when available; use a transaction, row locking when possible, exact replacement only, a concurrency check on the original template value, exactly one updated row, and rollback on mismatch or SQL error. Verify by querying the row back, confirming the new expression exists, and report target server/database/table/key, success, rows updated, verification result, final matching template line, and any permission or concurrency failure. For the known CentralAccount record, use database OneIM, schema dbo, table DialogColumn, key_column UID_DialogColumn, key_value QER-3082C6C2D6D748ED85A635C5063188F8, template_column Template; replace String.Format(\"{0}{1}\", $Firstname$, $Lastname$.Substring(0,1)) with String.Format(\"{0}-{1}\", $Lastname$, $Firstname$) and expect Value = QER_BuildCentralAccount(Entity, Function() String.Format(\"{0}-{1}\", $Lastname$, $Firstname$))."
     },
     {
       "id": "oim-rbac-governance",
@@ -159,6 +159,46 @@
       "vendor": "Agile AI",
       "version": "1.0.0",
       "promptAddon": "When creating a design-phase technical design document, if the story includes an IT Shop request flow, approval path, synchronization lifecycle, account provisioning path, process chain, rollback path, or system-to-system sequence, include a top-level mermaidDiagrams array. Each entry MUST be {\"title\":\"short diagram title\",\"diagram\":\"valid Mermaid syntax without markdown fences\"}. Keep labels concise and include only flows that clarify the design."
+    },
+    {
+      "id": "oim-infrastructure-provisioning",
+      "name": "OIM Infrastructure Provisioning",
+      "description": "Recognizes and enumerates One Identity Manager infrastructure setup as human-owned prerequisite tasks.",
+      "category": "discovery",
+      "stages": ["discovery", "design"],
+      "vendor": "Agile AI",
+      "version": "1.0.0",
+      "promptAddon": "One Identity Manager infrastructure setup is HUMAN-OWNED: no agent or MCP installs servers or deploys the database. In discovery, surface as prerequisites the install and configuration of the Job Server and Job Service, the Application Server, deployment and compilation of the OIM database, and assignment of Job Server roles, queues, and server functions. In design, the designer creates these as devTasks with executor \"human\", agent null, requiredSkills/requiredMcps/requiredTools empty, and an explicit operator instruction naming the tool and where to act (Job Server Configuration, Server Installer, Configuration Wizard, Designer). Define \"done\" concretely: the database is deployed and compiled, the Application Server is reachable, Job Server roles and queues are assigned, and both the DBQueue Processor and the Job Queue are processing and draining. Flag dependent sync, provisioning, and process work as blocked until these prerequisites are confirmed green."
+    },
+    {
+      "id": "oim-notifications-smtp",
+      "name": "OIM Notifications and SMTP",
+      "description": "Sets up One Identity Manager email notifications and routes SMTP credential entry to a human task.",
+      "category": "discovery",
+      "stages": ["discovery", "design"],
+      "vendor": "Agile AI",
+      "version": "1.0.0",
+      "promptAddon": "For One Identity Manager email and notification setup, the SMTP credential is never handled by an agent or passed through MCP input. In refinement and discovery, raise a direct clarification question to the Product Owner for the SMTP server address and the sending login or account to use. In design, create a HUMAN task (executor \"human\", agent null, empty required resources) instructing an operator to enter the mail server and SMTP configuration parameters in the Designer (Designer, configuration parameters, mail server / SMTP section); say to confirm the exact parameter paths in the Designer or product manual rather than inventing version-specific names. Do not attempt automated validation of the SMTP connection. Specify which notification processes, mail templates, and recipient resolution depend on this setup so they are sequenced after the credential is entered."
+    },
+    {
+      "id": "oim-account-definition",
+      "name": "OIM Account Definitions",
+      "description": "Designs and tests account definitions that drive automatic target-system account creation for identities.",
+      "category": "design",
+      "stages": ["discovery", "design", "dev", "qa"],
+      "vendor": "Agile AI",
+      "version": "1.0.0",
+      "promptAddon": "When working on One Identity Manager automatic account creation, model the account definition, its manage levels, IT operating data mapping and templates, and how it is assigned to identities directly, via business roles, via application roles, or via dynamic roles. Trace the chain Person to account definition to target-system account, and name the connected system (ADSAccount, UNSAccountB) the definition provisions into, aligning column behavior with oim-object-model templates and provisioning with oim-synchronization. Specify manage-level effects on account state, validity, and deferred deletion. Validate by creating a Person, confirming the account definition is assigned through the expected path, and checking that the target-system account is generated with the correct naming, container, and attributes; include cleanup or deprovisioning checks."
+    },
+    {
+      "id": "oim-identity-data-patterns",
+      "name": "OIM Identity Data Patterns",
+      "description": "Forces Product Owner confirmation of identity data patterns (naming, uniqueness) before HR, Person-creation, and Joiner build.",
+      "category": "discovery",
+      "stages": ["discovery", "refinement", "design", "qa"],
+      "vendor": "Agile AI",
+      "version": "1.0.0",
+      "promptAddon": "For One Identity Manager HR integration, Person record creation, and Joiner work, the identity data pattern must be confirmed by the Product Owner before build. Pin down the account-name / CentralAccount convention (for example firstname.lastname, first-initial plus lastname, lastname-firstname) and the conflict and uniqueness handling, and generalize the same discipline to ANY column data-pattern transformation applied at data ingestion, not only CentralAccount. State the key fact: number-append uniqueness is handled NATIVELY by the platform, so ONLY a non-number-append uniqueness rule requires reviewing or customizing the DialogScript behind the template. When the pattern is unspecified, raise a direct clarification question to the Product Owner during refinement, and as a DoR voter vote needs_clarification or not_ready until the Product Owner confirms it for these story types. Once confirmed, hand the pattern to dev via oneim-template-admin for the actual DialogColumn.Template and DialogScript change."
     }
   ]
 }
