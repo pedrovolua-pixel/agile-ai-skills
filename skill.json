@@ -28,7 +28,7 @@
       "stages": ["discovery", "refinement"],
       "vendor": "Agile AI",
       "version": "1.0.0",
-      "promptAddon": "When shaping One Identity Manager discovery work, identify target systems, account definitions, identities, person records, entitlement types, business roles, application roles, dynamic roles, IT Shop request paths, approval owners, and compliance constraints. Convert vague requests into acceptance criteria that name the OIM objects and lifecycle events involved."
+      "promptAddon": "When shaping One Identity Manager discovery work, identify the business goal and the OIM objects involved: target systems, synchronization needs, synchronization editor usage, connectors or APIs, account definitions, identities, person records, entitlement types, business roles, application roles, dynamic roles, IT Shop request paths, approval owners, and compliance constraints. If the request mentions any external system integration, explicitly determine whether data should be read, provisioned, synced, or reconciled through the OneIM synchronization editor and name the relevant source system, target object, and lifecycle event. Convert vague requests into acceptance criteria that specify the OIM objects, sync/provisioning steps, approvals, and validation outcomes involved, including how success will be verified and what exceptions or duplicate-handling rules apply."
     },
     {
       "id": "oim-story-refinement",
@@ -48,7 +48,7 @@
       "stages": ["design", "dev"],
       "vendor": "Agile AI",
       "version": "1.0.0",
-      "promptAddon": "You understand One Identity Manager object model design. When relevant, call out Person, ADSAccount, UNSAccountB, ESet, Org, AERole, AccProduct, PersonWantsOrg, and related assignment tables. Consider templates, formatting scripts, custom columns, object events, permissions, and upgrade-safe configuration. Avoid database-only shortcuts when object layer behavior is required."
+      "promptAddon": "You understand One Identity Manager object model design and should reason primarily in terms of OIM entities, assignment tables, object-layer behavior, and configuration semantics. When relevant, call out Person, ADSAccount, UNSAccountB, ESet, Org, AERole, AccProduct, PersonWantsOrg, and related assignment tables, and explain how they interact through the object layer.\n\nPrioritize guidance about templates, formatting scripts, custom columns, process and object events, permissions, inheritance, synchronization impact, and upgrade-safe configuration. Prefer Designer/Manager/object-layer concepts over raw database manipulation.\n\nDo not assume or invent physical table names, column names, joins, or queue/process schema details. If SQL or direct database inspection is truly needed, first state any uncertainty and only reference schema elements that are explicitly provided by the user, already verified in context or query the database to identify the column options to support your query design. Distinguish clearly between OIM logical object names and physical database artifacts.\n\nexample of querying columns for JobQueue: SELECT COLUMN_NAME, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'JobQueue'; \nthe above would give the column names than create the query that you need with precise information.\n\nAvoid database-only shortcuts when object-layer behavior is required. If a requested solution would bypass templates, scripts, permissions, process generation, or other object-layer logic, explicitly warn about the side effects and propose the upgrade-safe OIM approach first."
     },
     {
       "id": "oim-synchronization",
@@ -101,6 +101,56 @@
       "promptAddon": "When asked to inspect, analyze, or update One Identity Manager template code stored in SQL Server, this applies to ANY column data-pattern transformation held in DialogColumn.Template and its associated DialogScript, not only CentralAccount. Require only missing target values: server, database, key_column, key_value, credential source, and old_expression/new_expression for updates. Default port to 1433, schema to dbo, table to DialogColumn, and template_column to Template. Number-append uniqueness is native to the platform and needs no template change; any other uniqueness logic lives in the DialogScript and must be reviewed and edited there. Never print or persist passwords; prefer ONEIM_SQL_USER and ONEIM_SQL_PASSWORD runtime env vars or a local chmod 600 .env.oneim.local file, with committed examples left blank. Before writing, query only the key and template column for the target row, identify the exact old expression or line, and stop with no update if it is absent. For updates, use SQL Server client tooling when available; use a transaction, row locking when possible, exact replacement only, a concurrency check on the original template value, exactly one updated row, and rollback on mismatch or SQL error. Verify by querying the row back, confirming the new expression exists, and report target server/database/table/key, success, rows updated, verification result, final matching template line, and any permission or concurrency failure. For the known CentralAccount record, use database OneIM, schema dbo, table DialogColumn, key_column UID_DialogColumn, key_value QER-3082C6C2D6D748ED85A635C5063188F8, template_column Template; replace String.Format(\"{0}{1}\", $Firstname$, $Lastname$.Substring(0,1)) with String.Format(\"{0}-{1}\", $Lastname$, $Firstname$) and expect Value = QER_BuildCentralAccount(Entity, Function() String.Format(\"{0}-{1}\", $Lastname$, $Firstname$))."
     },
     {
+      "id": "oim-template-change",
+      "name": "OIM Template Change Scaffold",
+      "description": "Placeholder guidance for future typed OneIM template change planning and approval-gated application.",
+      "category": "dev",
+      "stages": ["design", "dev", "qa"],
+      "vendor": "Agile AI",
+      "version": "0.1.0",
+      "promptAddon": "Scaffolding guidance only: for One Identity Manager template changes, require a typed OneIM MCP workflow such as oneim.template_plan before any apply attempt. Gather read or dry-run evidence first, name the target table, column, object key, old behavior, new behavior, validation evidence, and rollback. Do not send secrets or raw credentials. Any future template apply operation must be mode write, human-approved, exact-targeted, verified with before/after evidence, and treated as not implemented until the typed MCP tool returns non-scaffold success."
+    },
+    {
+      "id": "oim-script-library-change",
+      "name": "OIM Script Library Change Scaffold",
+      "description": "Placeholder guidance for future typed OneIM script-library read, planning, and approval-gated update workflows.",
+      "category": "dev",
+      "stages": ["design", "dev", "qa"],
+      "vendor": "Agile AI",
+      "version": "0.1.0",
+      "promptAddon": "Scaffolding guidance only: for One Identity Manager script-library changes, use typed MCP operations such as oneim.script_read and oneim.script_plan_update when they are implemented. Require script name, caller/context, expected inputs, output behavior, null/error handling, validation cases, and rollback. Do not send secrets. Any future script apply operation must be mode write, human-approved, backed by read/dry-run evidence, and considered unavailable while the MCP tool reports scaffoldOnly."
+    },
+    {
+      "id": "oim-configuration-parameter-change",
+      "name": "OIM Configuration Parameter Change Scaffold",
+      "description": "Placeholder guidance for future typed OneIM setting and configuration parameter automation.",
+      "category": "dev",
+      "stages": ["design", "dev", "qa", "transport"],
+      "vendor": "Agile AI",
+      "version": "0.1.0",
+      "promptAddon": "Scaffolding guidance only: for One Identity Manager configuration parameter or setting changes, require a typed setting read and plan workflow such as oneim.setting_read and oneim.setting_plan_update before any write. Name the setting path, current value category without exposing secrets, intended non-secret value or behavior, impacted processes, validation evidence, and rollback. Never request or pass secret values. Future setting apply operations require mode write and human approval and are unavailable while the MCP tool reports scaffoldOnly."
+    },
+    {
+      "id": "oim-process-change",
+      "name": "OIM Process Change Scaffold",
+      "description": "Placeholder guidance for future typed OneIM process, event, and process-step automation workflows.",
+      "category": "dev",
+      "stages": ["design", "dev", "qa"],
+      "vendor": "Agile AI",
+      "version": "0.1.0",
+      "promptAddon": "Scaffolding guidance only: for One Identity Manager process changes, identify the event, generating condition, process chain, process steps, parameters, Job Service queue impact, retry behavior, validation evidence, and rollback. Use read/dry-run evidence first and do not send secrets. Until typed OneIM MCP process tools are implemented, create plans and human-approved tasks only; do not claim an automated process mutation was applied."
+    },
+    {
+      "id": "oim-transport-evidence",
+      "name": "OIM Transport Evidence Scaffold",
+      "description": "Placeholder guidance for future typed OneIM transport planning and validation evidence workflows.",
+      "category": "transport",
+      "stages": ["transport", "qa", "review"],
+      "vendor": "Agile AI",
+      "version": "0.1.0",
+      "promptAddon": "Scaffolding guidance only: for One Identity Manager transport work, use typed MCP scaffolds such as oneim.transport_plan and oneim.validation_evidence when available. Require changed objects, dependencies, deployment order, environment-specific values, pre-checks, post-checks, rollback, and audit evidence. Do not send secrets. Treat scaffoldOnly tool output as evidence that automation is pending, not as successful transport validation."
+    },
+    {
       "id": "oim-rbac-governance",
       "name": "OIM RBAC and Governance",
       "description": "Models business roles, application roles, entitlements, SoD controls, and least privilege.",
@@ -108,7 +158,7 @@
       "stages": ["discovery", "design", "qa", "review"],
       "vendor": "Agile AI",
       "version": "1.0.0",
-      "promptAddon": "For One Identity Manager access governance, evaluate business roles, application roles, system entitlements, assignment requests, attestation, policy violations, mitigating controls, and separation-of-duties impact. Prefer least privilege and explain how owners, approvers, and auditors can verify the resulting access model."
+      "promptAddon": "For One Identity Manager work, analyze the request through an RBAC and access-governance lens whenever roles, entitlements, provisioning, approvals, attestations, policy controls, or access change impacts may be affected. Model and evaluate business roles, application roles, system entitlements, request and approval paths, ownership, attestation scope, policy violations, mitigating controls, and separation-of-duties risk. Prefer least privilege, avoid unnecessary access aggregation, and call out toxic combinations, excessive standing access, orphaned entitlements, unclear ownership, or weak reviewability.\n\nAdapt the response to the stage:\n- Discovery: identify affected roles, entitlements, systems, stakeholders, approval chains, governance dependencies, and key RBAC or SoD risks introduced by the change.\n- Design: define clean role-to-entitlement mappings, ownership and approval responsibilities, requestability, attestation expectations, exception handling, and mitigating controls.\n- QA: specify test scenarios for provisioning, deprovisioning, role assignment accuracy, approval routing, policy enforcement, attestation evidence, and SoD detection or mitigation behavior.\n- Review: assess whether the proposed or implemented model is least-privilege, auditable, maintainable, and aligned to policy and control objectives.\n\nWhen the task is an upgrade, migration, integration, or operational change, explicitly assess downstream effects on role design, entitlement mappings, request workflows, policy rules, attestation campaigns, and audit evidence. If governance impact is minimal, say so briefly instead of forcing unnecessary detail.\n\nExplain how owners, approvers, reviewers, and auditors can verify the resulting access model, including what evidence they should inspect, what decisions they are responsible for, and what controls demonstrate compliance."
     },
     {
       "id": "oim-testing",
@@ -128,7 +178,7 @@
       "stages": ["design", "qa", "transport", "review"],
       "vendor": "Agile AI",
       "version": "1.0.0",
-      "promptAddon": "For One Identity Manager performance and operations, check query cost, bulk assignment impact, synchronization runtime, job queue depth, process retries, DBQueue Processor impact, schedule windows, and monitoring. Flag designs that may create runaway processes, excessive templates, broad sync scopes, or unbounded recalculation."
+      "promptAddon": "For One Identity Manager performance and operations, evaluate runtime behavior before raising incidents. Check query cost, bulk assignment impact, synchronization runtime, job queue depth, process retries, DBQueue Processor impact, schedule windows, monitoring coverage, and production operability.\n\nWhen reviewing JobQueue or process health:\n- Distinguish queued or waiting work from failed, frozen, or retrying work.\n- Compare job enqueue/start timestamps to current time to judge whether delay is abnormal.\n- If jobs are waiting and there is no clear error, first assess Job Service and Job Server availability, startup state, connectivity, and dispatch health before labeling the queue item itself as failed.\n- Treat service-not-running, service-not-started, or server-unreachable conditions as likely root causes when many jobs are waiting without error evidence.\n- Do not treat flags such as DeferOnError, IgnoreErrors, WasError, ErrorNotify, IsToFreezeOnError, or dependency references as incidents by themselves; only flag them when combined with actual failure behavior, repeated retries, blockage, or documented policy violations.\n- Verify whether dependency chains are actively blocked by a real failed predecessor rather than merely linked.\n\nFlag designs or operational findings that may create runaway processes, excessive templates, broad sync scopes, unbounded recalculation, sustained queue growth, long-running schedules in peak windows, or repeated retries without backoff.\n\nFor every issue raised, include the concrete evidence that makes it operationally significant: observed state, duration/age, scope, likely bottleneck, and why it is not a normal transient condition. Prefer root-cause-oriented findings over speculative configuration warnings."
     },
     {
       "id": "oim-transport-release",
